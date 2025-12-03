@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"os"
 )
@@ -11,9 +12,26 @@ func writeCalculationsToFile(ebt, profit, ratio float64) {
 }
 
 func main() {
-	revenue := retrieveUserInput("Revenue: ")
-	expenses := retrieveUserInput("Expenses: ")
-	taxRate := retrieveUserInput("Tax Rate: ")
+	revenue, err := retrieveUserInput("Revenue: ")
+
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	expenses, err := retrieveUserInput("Expenses: ")
+
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	taxRate, err := retrieveUserInput("Tax Rate: ")
+
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 
 	ebt, profit, ratio := calculateFinancials(revenue, expenses, taxRate)
 
@@ -22,13 +40,17 @@ func main() {
 	fmt.Printf("%.3f\n", ratio)
 }
 
-func retrieveUserInput(infoText string) float64 {
+func retrieveUserInput(infoText string) (float64, error) {
 	var userInput float64
 
 	fmt.Print(infoText)
 	fmt.Scan(&userInput)
 
-	return userInput
+	if userInput <= 0 {
+		return 0, errors.New("value must be a positive number")
+	}
+
+	return userInput, nil
 }
 
 func calculateFinancials(revenue, expenses, taxRate float64) (float64, float64, float64) {

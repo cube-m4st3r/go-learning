@@ -17,7 +17,8 @@
 				"golang.go"
 			]
 		}
-	}
+	},
+	"postCreateCommand": "git config --local include.path ../.gitconfig"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},

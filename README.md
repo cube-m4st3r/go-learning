@@ -15,7 +15,6 @@ Small collection of simple Go example programs used for learning and experimenta
 ## Running
 
 From the repository root you can run any example with `go run`:
-
 ```bash
 # run the bank example
 go run ./bank

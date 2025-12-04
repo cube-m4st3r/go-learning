@@ -4,6 +4,12 @@
 	"name": "Go",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/go:2-1.25-trixie",
+	"mounts": [
+    	"source=${localEnv:SSH_AUTH_SOCK},target=/ssh-agent,type=bind,consistency=cached"
+	],
+	"containerEnv": {
+		"SSH_AUTH_SOCK": "/ssh-agent"
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [

@@ -30,3 +30,7 @@ go run ./profit_calculator
 
 - Each example is a small self-contained module. Inspect the `go.mod` files in the subfolders for module-specific settings.
 - Feel free to modify and experiment — these programs are intended for learning.
+
+## License
+
+This project is provided under the MIT License — see `LICENSE` for full terms.

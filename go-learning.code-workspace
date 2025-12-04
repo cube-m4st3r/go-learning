@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "go.toolsManagement.autoUpdate": true,
+    "go.lintOnSave": "workspace",
+    "go.testOnSave": false,
+    "go.coverOnSave": false
+  },
+  "extensions": {
+    "recommendations": [
+      "golang.go"
+    ]
+  }
+}

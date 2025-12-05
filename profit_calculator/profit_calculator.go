@@ -6,6 +6,8 @@ import (
 	"os"
 )
 
+// test hook
+
 func writeCalculationsToFile(ebt, profit, ratio float64) {
 	calculationsText := fmt.Sprintf("ebt: %v\nprofit: %v\nratio: %v\n", ebt, profit, ratio)
 	os.WriteFile("calcs.txt", []byte(calculationsText), 0644)
@@ -51,14 +53,4 @@ func retrieveUserInput(infoText string) (float64, error) {
 	}
 
 	return userInput, nil
-}
-
-func calculateFinancials(revenue, expenses, taxRate float64) (float64, float64, float64) {
-	ebt := revenue - expenses
-	profit := ebt * (1 - taxRate/100)
-	ratio := ebt / profit
-
-	writeCalculationsToFile(ebt, profit, ratio)
-
-	return ebt, profit, ratio
 }

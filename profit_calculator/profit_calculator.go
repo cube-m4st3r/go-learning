@@ -54,3 +54,15 @@ func retrieveUserInput(infoText string) (float64, error) {
 
 	return userInput, nil
 }
+
+func calculateFinancials(revenue, expenses, taxRate float64) (float64, float64, float64) {
+
+	ebt := revenue - expenses
+	profit := ebt * (1 - taxRate/100)
+	ratio := ebt / profit
+
+	writeCalculationsToFile(ebt, profit, ratio)
+
+	return ebt, profit, ratio
+
+}

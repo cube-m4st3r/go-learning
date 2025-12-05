@@ -12,7 +12,8 @@
   },
   "extensions": {
     "recommendations": [
-      "golang.go"
+      "adpyke.codesnap",
+      "github.vscode-github-actions"
     ]
   }
 }

@@ -31,6 +31,11 @@ go run ./profit_calculator
 - Each example is a small self-contained module. Inspect the `go.mod` files in the subfolders for module-specific settings.
 - Feel free to modify and experiment — these programs are intended for learning.
 
+## Further plans for this repo
+
+- Implement .git hooks or use the pre-commit framework
+- Update the devcontainer with a custom Dockerfile to build a container with go and pre-commit framework installed (if so chosen)
+
 ## License
 
 This project is provided under the MIT License — see `LICENSE` for full terms.

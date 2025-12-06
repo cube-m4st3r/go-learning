@@ -12,6 +12,9 @@ Small collection of simple Go example programs used for learning and experimenta
 
 - Go (the dev container includes a recent Go toolchain).
 
+> [!IMPORTANT]  
+> The current configuration for the devcontainer does **NOT** support out of the box windows runtime. You might have do adjust it for your specific needs.
+
 ## Running
 
 From the repository root you can run any example with `go run`:

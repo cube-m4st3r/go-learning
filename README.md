@@ -35,6 +35,8 @@ go run ./profit_calculator
 
 - Implement .git hooks or use the pre-commit framework
 - Update the devcontainer with a custom Dockerfile to build a container with go and pre-commit framework installed (if so chosen)
+- Create better GitHub Actions aka. CI/CD
+- Write documentation and explanations for each section and mini project
 
 ## License
 
